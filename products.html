@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="#">Warehouse System</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><button onclick="openMenu()">Menu</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="products-container">
+    <h1>Product Management</h1>
+    <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <div class="product-info">
+            <h2>Product Name 1</h2>
+            <p>In Stock: 50</p>
+            <div class="product-actions">
+                <button onclick="editProduct()">Edit</button>
+                <button onclick="deleteProduct()">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <div class="product-info">
+            <h2>Product Name 2</h2>
+            <p>In Stock: 30</p>
+            <div class="product-actions">
+                <button onclick="editProduct()">Edit</button>
+                <button onclick="deleteProduct()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="menuOverlay" class="overlay">
+    <div class="overlay-content">
+        <button onclick="addNewProduct()">Add New Product</button>
+        <button onclick="processorder()">Process Order to Customer</button>
+        <button onclick="closeMenu()">Close</button>
+    </div>
+</div>
+<script>
+    function openMenu() {
+        document.getElementById("menuOverlay").style.display = "block";
+    }
+    function closeMenu() {
+        document.getElementById("menuOverlay").style.display = "none";
+    }
+    function addNewProduct() {
+        window.location.href = "add_product.html";
+    }
+    function processorder() {
+        window.location.href = "invoice_generator.html";
+    }
+    function editProduct() {
+        alert("Implement functionality to edit product here!");
+    }
+    function deleteProduct() {
+        alert("Implement functionality to delete product here!");
+    }
+</script>
+</body>
+</html>
